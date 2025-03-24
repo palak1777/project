@@ -1,0 +1,80 @@
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
+const Portfolio = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white p-6 md:p-10">
+      <motion.h1 
+        className="text-3xl md:text-4xl font-bold text-center mb-6"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
+        Welcome to Palak Pal's Portfolio
+      </motion.h1>
+      <div className="flex justify-center mb-6">
+        <img 
+          src="/mnt/data/WhatsApp Image 2025-03-16 at 10.08.01 PM.jpeg" 
+          alt="Palak Pal" 
+          className="w-32 h-32 md:w-48 md:h-48 rounded-full border-4 border-white shadow-lg object-cover"
+        />
+      </div>
+      <p className="text-center text-gray-200 text-sm md:text-base">Contact: 9321211413 | Email: palpalak951@gmail.com</p>
+      
+      <div className="mt-6 max-w-3xl mx-auto">
+        <h2 className="text-xl md:text-2xl font-semibold mb-4">About Me</h2>
+        <p className="text-gray-100 text-sm md:text-base">A passionate and tech-savvy 2nd-year BCA student at SNDT Matunga with a keen interest in software development, database management, and business applications. Currently working on a Centralized Event Management System project.</p>
+      </div>
+      
+      <div className="mt-6 max-w-3xl mx-auto">
+        <h2 className="text-xl md:text-2xl font-semibold mb-4">Education</h2>
+        <ul className="text-gray-100 text-sm md:text-base">
+          <li><strong>BCA</strong>, SNDT Women’s University, Matunga (2023-2025)</li>
+          <li><strong>12th Standard</strong>, SNDT College, Malad (2021-2023)</li>
+          <li><strong>10th Standard</strong>, Royal Academy School, Virar (2012-2021)</li>
+        </ul>
+      </div>
+      
+      <div className="mt-6 max-w-3xl mx-auto">
+        <h2 className="text-xl md:text-2xl font-semibold mb-4">Technical Skills</h2>
+        <ul className="text-gray-100 text-sm md:text-base grid grid-cols-1 md:grid-cols-2 gap-2">
+          <li>Programming Languages: Python, HTML</li>
+          <li>Database Management: DBMS, SQL</li>
+          <li>Business Applications: Advanced Excel, Tally ERP</li>
+          <li>Project Management: Event Planning and System Development</li>
+        </ul>
+      </div>
+      
+      <div className="mt-6 max-w-3xl mx-auto">
+        <h2 className="text-xl md:text-2xl font-semibold mb-4">Soft Skills</h2>
+        <ul className="text-gray-100 text-sm md:text-base grid grid-cols-1 md:grid-cols-2 gap-2">
+          <li>Problem-solving and analytical thinking</li>
+          <li>Team collaboration and leadership</li>
+          <li>Time management and adaptability</li>
+        </ul>
+      </div>
+      
+      <div className="mt-6 max-w-3xl mx-auto">
+        <h2 className="text-xl md:text-2xl font-semibold mb-4">Projects</h2>
+        <Card className="bg-white text-black">
+          <CardContent className="p-4 text-center">
+            <h2 className="text-lg md:text-xl font-semibold">Centralized Event Management System</h2>
+            <p className="text-gray-700 text-sm md:text-base">Developing a platform to manage events, users, venues, and feedback efficiently.</p>
+            <Button className="mt-4 bg-purple-600 text-white">View More</Button>
+          </CardContent>
+        </Card>
+      </div>
+      
+      <div className="mt-6 max-w-3xl mx-auto">
+        <h2 className="text-xl md:text-2xl font-semibold mb-4">Extracurricular Activities</h2>
+        <ul className="text-gray-100 text-sm md:text-base">
+          <li>Participated in tech fests and coding competitions.</li>
+          <li>Active member of the college’s IT club.</li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default Portfolio;
